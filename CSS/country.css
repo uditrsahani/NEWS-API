@@ -1,0 +1,11 @@
+.search-box{
+  display: flex;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container{
+  flex-direction: column;
+}
+

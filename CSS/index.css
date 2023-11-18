@@ -1,0 +1,70 @@
+.news-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the article div inside the container */
+.news-container div {
+  margin-bottom: 20px;
+}
+
+/* Style the image */
+.news-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Style the heading */
+.news-container h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Style the paragraphs */
+.news-container p {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Style the link */
+.news-container a {
+  color: #007BFF;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid #007BFF;
+  padding-bottom: 2px;
+  margin-top: 10px;
+}
+
+/* Style the horizontal rule */
+.news-container hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .news-container {
+    padding: 15px;
+  }
+  
+  .news-container img {
+    border-radius: 4px;
+  }
+  
+  .news-container h2 {
+    font-size: 1.2em;
+  }
+  
+  .news-container p {
+    font-size: 0.9em;
+  }
+}

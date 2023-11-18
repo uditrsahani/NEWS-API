@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/top-headlines.css">
+  <link rel="stylesheet" href="../CSS/country.css">
+
+  <title>News API - Read by Topic</title>
+</head>
+
+<body>
+
+  <!-- Menu Bar -->
+  <header>
+    <nav>
+      <a href="../HTML/index.html">Home</a>
+      <a href="../HTML/topic.html">Read-by-Topic</a>
+      <a href="../HTML/top-headlines.html">Top-Headlines</a>
+      <a href="../HTML/categories.html">Read-by-Categories</a>
+      <a href="../HTML/contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+
+  <!-- Centered Search Box -->
+  <div class="search-container">
+    <h1>Search by Topic</h1>
+    <div class="search-box">
+      <input type="text" id="countryNameInput" class="search-input" placeholder="Search by topic...eg: bitcoin">
+      <button class="search-btn" onclick="convertToCountryCode()">Search</button>
+    </div>
+  </div>
+
+  <!--News Output-->
+  <div class="container" style="display: none;" id="articlesContainer">
+    <!--Beauty the card using flex and render 4 in a row -->
+      </div>
+
+
+  <!-- Footer -->
+  <footer>
+    Developed by Udit Sahani | <a href="https://www.linkedin.com/in/uditsahani/" target="_blank">LinkedIn</a>
+</footer>
+
+<script src="../JS/topic.js"></script>
+</body>
+
+</html>

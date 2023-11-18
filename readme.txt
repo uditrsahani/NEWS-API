@@ -1,0 +1,1 @@
+The NewsAPI Project has been created by Udit Sahani as a practice project. A live demonstration of the website is accessible at uditsahani.tech/news-api
