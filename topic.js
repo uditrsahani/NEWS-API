@@ -11,14 +11,9 @@ function convertToCountryCode() {
   });
 
   // Define the fetch options
-  const options = {
-    method: "GET", // HTTP method (GET, POST, etc.)
-    headers: headers, // Headers object
-    // Other options like body, mode, cache, etc. can be added here
-  };
-
+  
   // Make a GET request to the News API
-  fetch(fullUrl, options)
+  fetch(fullUrl)
     .then((response) => {
       // Check if the request was successful (status code 200)
       if (!response.ok) {
