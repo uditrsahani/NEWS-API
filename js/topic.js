@@ -5,12 +5,7 @@ function convertToCountryCode() {
 
   // Construct the complete URL with the API key
   const fullUrl = `https://newsapi.org/v2/everything?q=${topic}&apiKey=df1fc0912eb64bcda9752306a6595eec`;
-  const headers = new Headers({
-    "Content-Type": "application/json",
-    // 'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
-  });
-
-  // Define the fetch options
+ 
   
   // Make a GET request to the News API
   fetch(fullUrl)
