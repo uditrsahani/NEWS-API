@@ -216,8 +216,14 @@ function convertToCountryCode() {
   const articlesContainer = document.getElementById("articlesContainer");
   articlesContainer.innerText = "Loading..."
   const countryNameInput = document.querySelector("#countryNameInput").value;
-  const country = countriesByName[countryNameInput];
-  // console.log(countriesByName[countryNameInput]);
+
+  const countryFinal = countryNameInput.charAt(0).toUpperCase() + countryNameInput.slice(1);
+
+  const country = countriesByName[countryFinal];
+  
+
+  console.log(country);
+  console.log(countryFinal);
 
   // Construct the complete URL with the API key
   const fullUrl = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=df1fc0912eb64bcda9752306a6595eec`;
