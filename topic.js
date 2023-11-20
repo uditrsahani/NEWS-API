@@ -1,13 +1,24 @@
 function convertToCountryCode() {
   const articlesContainer = document.getElementById("articlesContainer");
-  articlesContainer.innerText = "Loading..."
-  const topic = document.getElementById('countryNameInput').value;
+  articlesContainer.innerText = "Loading...";
+  const topic = document.getElementById("countryNameInput").value;
 
   // Construct the complete URL with the API key
   const fullUrl = `https://newsapi.org/v2/everything?q=${topic}&apiKey=df1fc0912eb64bcda9752306a6595eec`;
-  
+  const headers = new Headers({
+    "Content-Type": "application/json",
+    // 'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
+  });
+
+  // Define the fetch options
+  const options = {
+    method: "GET", // HTTP method (GET, POST, etc.)
+    headers: headers, // Headers object
+    // Other options like body, mode, cache, etc. can be added here
+  };
+
   // Make a GET request to the News API
-  fetch(fullUrl)
+  fetch(fullUrl, options)
     .then((response) => {
       // Check if the request was successful (status code 200)
       if (!response.ok) {
@@ -22,10 +33,10 @@ function convertToCountryCode() {
       // Handle the retrieved data
       // console.log(data.articles);
       const articlesContainer = document.getElementById("articlesContainer");
-      articlesContainer.style.display = "block"
-      articlesContainer.innerHTML = ''
-      data.articles.forEach(news => {
-        const articleDiv = document.createElement('div');
+      articlesContainer.style.display = "block";
+      articlesContainer.innerHTML = "";
+      data.articles.forEach((news) => {
+        const articleDiv = document.createElement("div");
         articleDiv.innerHTML = `
         <img src="${news.urlToImage}" alt="${news.title}">
         <h2> ${news.title} </h2>
@@ -35,14 +46,12 @@ function convertToCountryCode() {
         <a href="${news.url}" target="_blank">Read More</a>
         <hr>
         `;
-        articlesContainer.appendChild(articleDiv)
+        articlesContainer.appendChild(articleDiv);
       });
-      
-  
     })
     .catch((error) => {
       // Handle errors during the fetch
       // console.error("Error during fetch operation:", error);
-      alert("Error:" + error)
+      alert("Error:" + error);
     });
 }
