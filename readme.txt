@@ -1,3 +1,7 @@
+<h2> News API Project using JavaScript</h2>
+
+<h2>Check <a href="https://uditrsahani.github.io/NEWS-API/html/index.html" target="_blank"><b>Demo</b></a> here.</h2>
+
 1. To use the website, open visual studio code and clone the the project using "git clone https://github.com/uditrsahani/NEWS-API.git" replace the api key with your newsapi.org's apikey, you can get your apikey at https://newsapi.org/account.
 
 2. Open with live server.
